@@ -6,5 +6,5 @@ a beginner's RoR app to post onto a blogging site
 
 + sign-up/ sign-in / log-out
 + user can create post
-+ home page displays posts off all users who have signed up
-+ clicking on a particular post shows the posts title and content
++ home page displays posts of all users who have signed up
++ clicking on a particular post shows the post's title and content
