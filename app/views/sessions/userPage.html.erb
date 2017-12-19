@@ -9,8 +9,11 @@
 <div class = "new-post">
     <%= link_to 'New Post',sessions_post_path %>
 </div>
+<div class = "signout">
+    <%= link_to 'Sign Out', blogout_main_home_path %>
+</div>
 <div class = "all-posts">
     <% Blog.all.each do |post|%>
-        <br><%= post.title %> by user <%=post.user.name%>
+        <br><%= link_to post.title, controller: "blog", action: "show", id: post.id%> by user <%=post.user.name%>
     <% end %>
 </div>

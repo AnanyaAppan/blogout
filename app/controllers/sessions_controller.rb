@@ -22,4 +22,7 @@ class SessionsController < ApplicationController
         @blog = Blog.new
     end
 
+    def signout
+    end
+
 end

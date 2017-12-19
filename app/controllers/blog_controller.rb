@@ -21,4 +21,7 @@ class BlogController < ApplicationController
         params.require(:blog).permit(:title,:content)
     end
 
+    def show
+    end
+
 end

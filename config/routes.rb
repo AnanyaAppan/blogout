@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'sessions/userPage', to: 'sessions#userPage'
   get 'sessions/post', to: 'sessions#post'
   get 'blog/create', to:'blog#create'
+  get 'blog/show', to:'blog#show'
   post 'blogout_main/signup', to:'users#create'
   post 'blogout_main/signin', to:'sessions#validate'
   post 'sessions/post',  to:'blog#create'
