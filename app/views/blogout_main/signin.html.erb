@@ -8,13 +8,15 @@
 
 <div class = "form">
 <%= form_for(:session, url: blogout_main_signin_path) do |f| %>
-
+    <center>
+    <h1> Sign-in </h1>
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <br><%= f.text_field :name, class: 'form-control' %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
+    <br><%= f.label :password %>
+    <br><%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.submit "Sign In", class: "btn btn-primary" %>
+    <br> <%= f.submit "Sign In", class: "btn btn-primary" %>
+    </center>
 <% end %>
 </div>

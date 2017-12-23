@@ -1,21 +1,22 @@
-
 <div class = "top">
-    <div class = "home"><a href = "/">HOME</a></div>
-    <div class = "signIn-signUp">
-        <%= link_to 'sign-in', blogout_main_signin_path %>
-        <%= link_to 'sign-up', blogout_main_signup_path  %>
-    </div>
+<div class = "home"><a href = "/">HOME</a></div>
+<div class = "signIn-signUp">
+    <%= link_to 'sign-in', blogout_main_signin_path %>
+    <%= link_to 'sign-up', blogout_main_signup_path  %>
+</div>
 </div>
 
 <div class = "form">
-    <%= form_for @user do |f| %>
+<%= form_for(:session, url: blogout_main_signin_path) do |f| %>
+    <center>
+    <h1> Sign-up </h1>
+    <%= f.label :name %>
+    <br><%= f.text_field :name, class: 'form-control' %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
+    <br><%= f.label :password %>
+    <br><%= f.password_field :password, class: 'form-control' %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.submit "Sign Up", class: "btn btn-primary" %>
-    <% end %>
+    <br> <%= f.submit "Sign Up", class: "btn btn-primary" %>
+    </center>
+<% end %>
 </div>

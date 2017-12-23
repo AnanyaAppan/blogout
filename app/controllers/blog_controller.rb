@@ -22,6 +22,7 @@ class BlogController < ApplicationController
     end
 
     def show
+        
     end
 
 end

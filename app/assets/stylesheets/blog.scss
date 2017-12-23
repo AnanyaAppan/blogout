@@ -1,3 +1,120 @@
-// Place all the styles related to the blog controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$list: ("postit1.png","postit2.png","postit3.png","postit4.png");
+.signout{
+    
+        float: right;
+        position: relative;
+        padding-right: 20px;
+    
+        /* unvisited link */
+        a:link {
+            color: white;
+        }
+    
+       /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+}
+
+.post:nth-of-type(4n){
+    background-image: image_url(#{nth($list,1)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+.post:nth-of-type(4n+1){
+    background-image: image_url(#{nth($list,2)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+
+.post:nth-of-type(4n+2){
+    background-image: image_url(#{nth($list,3)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 50px;
+    float: center;
+    padding: 100px;
+}
+
+
+.post:nth-of-type(4n+3){
+    background-image: image_url(#{nth($list,4)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 0px;
+}
+
+.form:nth-of-type(4n){
+    background-image: image_url(#{nth($list,1)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+.form:nth-of-type(4n+1){
+    background-image: image_url(#{nth($list,2)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+
+.form:nth-of-type(4n+2){
+    background-image: image_url(#{nth($list,3)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 50px;
+    float: center;
+    padding: 100px;
+}
+
+
+.form:nth-of-type(4n+3){
+    background-image: image_url(#{nth($list,4)});
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin: 20px 30px;
+    padding: 0px;
+}

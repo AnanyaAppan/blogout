@@ -1,19 +1,22 @@
-
-<div class = "top">
-    <div class = "home"><a href = "/">HOME</a></div>
-    <div class = "signIn-signUp">
-        <%= link_to 'sign-in', blogout_main_signin_path %>
-        <%= link_to 'sign-up', blogout_main_signup_path  %>
+<div class="body">
+    <div class = "top">
+        <div class = "home"><a href = "/">HOME</a></div>
+        <div class = "signIn-signUp">
+            <%= link_to 'sign-up', blogout_main_signup_path  %>
+        </div>
+        <div class = "signout">
+            <%= link_to 'Sign Out', blogout_main_home_path %>
+        </div>
     </div>
-</div>
-<div class = "new-post">
-    <%= link_to 'New Post',sessions_post_path %>
-</div>
-<div class = "signout">
-    <%= link_to 'Sign Out', blogout_main_home_path %>
-</div>
-<div class = "all-posts">
+    <div class = "new-post">
+        <%= link_to 'New Post',sessions_post_path %>
+    </div>
+    
     <% Blog.all.each do |post|%>
-        <br><%= link_to post.title, controller: "blog", action: "show", id: post.id%> by user <%=post.user.name%>
+        <div class = "all-posts">
+            <br><%= link_to post.title, controller: "blog", action: "show", id: post.id%>
+            <br> by <%=post.user.name%>
+        </div>
     <% end %>
+    
 </div>
