@@ -25,4 +25,8 @@ class BlogController < ApplicationController
         
     end
 
+    def delete
+
+    end
+
 end

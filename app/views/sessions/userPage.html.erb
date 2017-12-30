@@ -8,8 +8,9 @@
             <%= link_to 'Sign Out', blogout_main_home_path %>
         </div>
     </div>
-    <div class = "new-post">
+    <div class = "tool-bar">
         <%= link_to 'New Post',sessions_post_path %>
+        <%= link_to 'My Posts',sessions_myposts_path %>
     </div>
     
     <% Blog.all.each do |post|%>

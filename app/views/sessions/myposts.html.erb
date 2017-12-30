@@ -1,0 +1,26 @@
+<div class="body">
+<div class = "top">
+    <div class = "home"><a href = "/">HOME</a></div>
+    <div class = "signIn-signUp">
+        <%= link_to 'sign-up', blogout_main_signup_path  %>
+    </div>
+    <div class = "signout">
+        <%= link_to 'Sign Out', blogout_main_home_path %>
+    </div>
+</div>
+<div class = "tool-bar">
+    <%= link_to 'New Post',sessions_post_path %>
+    <%= link_to 'My Posts',sessions_myposts_path %>
+</div>
+<% user = User.find_by("id":session[:user]["id"]) %>
+<% Blog.all.each do |post|%>
+    <% if(post.user== user) %>
+    <div class = "all-posts">
+            <br><%= link_to post.title, controller: "blog", action: "show", id: post.id%>
+            <br> by <%=post.user.name%>
+            <br><%= link_to "delete", controller: "blog", action: "delete", id: post.id%>
+        <% end %>
+    </div>
+<% end %>
+
+</div>

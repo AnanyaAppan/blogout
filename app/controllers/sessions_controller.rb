@@ -25,4 +25,7 @@ class SessionsController < ApplicationController
     def signout
     end
 
+    def myposts
+    end
+
 end

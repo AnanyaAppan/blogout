@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
     def create
-        @user = User.new(user_params)
+        name = params[:session][:name]
+        pwd = params[:session][:password]
+        @user = User.new(name:name,password:pwd)
         if @user.valid?
             @message = ""
             User.all.each do |u|
@@ -20,11 +22,6 @@ class UsersController < ApplicationController
                 @message = "please enter username"
             end
         end
-    end
-
-    private
-    def user_params
-        params.require(:user).permit(:name,:password)
     end
 
 end
